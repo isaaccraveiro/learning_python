@@ -9,8 +9,11 @@ HEIGHT = 600
 COLOUR = (255,123,67)
 BACKGROUND = (0,0,0)
 
-player_pos = [50, 300]
-player_size = 75
+player_pos = [50, 500]
+player_size = 50
+
+enemy_size = 75
+enemy_pos = [100, 0]
 
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
 
