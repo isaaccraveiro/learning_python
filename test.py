@@ -9,7 +9,7 @@ HEIGHT = 600
 COLOUR = (255,123,67)
 BACKGROUND = (0,0,0)
 
-player_pos = [400, 300]
+player_pos = [50, 300]
 player_size = 75
 
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
@@ -19,8 +19,6 @@ game_over = False
 while not game_over:
 
     for event in pygame.event.get():
-        print(event)
-
         if event.type == pygame.QUIT:
             sys.exit(),
 
