@@ -7,6 +7,7 @@ WIDTH = 800
 HEIGHT = 600
 
 COLOUR = (255,123,67)
+BACKGROUND = (0,0,0)
 
 player_pos = [400, 300]
 player_size = 75
@@ -34,7 +35,7 @@ while not game_over:
 
         player_pos = [x,y]
 
-    screen.fill((0,0,0))
+    screen.fill(BACKGROUND)
     pygame.draw.rect(screen, COLOUR, (player_pos[0], player_pos[1], player_size, player_size))
 
     pygame.display.update()
