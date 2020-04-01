@@ -33,7 +33,7 @@ while not game_over:
             elif event.key == pygame.K_RIGHT:
                 x += player_size
 
-        player_pos = [x,y]
+            player_pos = [x,y]
 
     screen.fill(BACKGROUND)
     pygame.draw.rect(screen, COLOUR, (player_pos[0], player_pos[1], player_size, player_size))
