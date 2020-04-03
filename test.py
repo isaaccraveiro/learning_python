@@ -39,32 +39,40 @@ while not game_over:
 
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
+            print("quit")
             sys.exit(),
 
         if event.type == pygame.KEYDOWN:
+            print("key down")
             x = player_pos[0]
             y = player_pos[1]
 
             if event.key == pygame.K_LEFT:
+                print("key left")
                 x -= player_size
             elif event.key == pygame.K_RIGHT:
+                print("key right")
                 x += player_size
 
             player_pos = [x,y]
 
     screen.fill(BACKGROUND)
     if enemy_pos[1] >= 0 and enemy_pos[1] < HEIGHT:
+        print("move enemy: ", enemy_pos[1])
         enemy_pos[1] += 20
     else:
-        enemy_pos[0] = random.randint(0,WIDTH-enemy_size)
+        print("new enemy")
+        enemy_pos[0] = random.randint(0, WIDTH - enemy_size)
         enemy_pos[1] = 1
 
     if detect_collision(player_pos,enemy_pos):
+        print("game over")
+        COLOUR = (155,123,67)
         game_over = True
 
     pygame.draw.rect(screen,  SILVER, (enemy_pos[0], enemy_pos[1], enemy_size, enemy_size))
     pygame.draw.rect(screen, COLOUR, (player_pos[0], player_pos[1], player_size, player_size))
 
-    clock.tick(35)
+    clock.tick(10)
 
     pygame.display.update()
