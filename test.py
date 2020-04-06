@@ -10,7 +10,7 @@ HEIGHT = 600
 COLOUR = (255,123,67)
 SILVER = (192,192,192)
 BACKGROUND = (169,169,169)
-SPEED = 35
+SPEED = 30
 
 player_pos = [700, 500]
 player_size = 50
@@ -23,6 +23,17 @@ screen = pygame.display.set_mode((WIDTH, HEIGHT))
 game_over = False
 
 clock = pygame.time.Clock()
+
+def drop_enemies(enemy_list):
+    if len(enemy_list) < 10:
+        x_pos = random.randint(0,WIDTH-enemy_size)
+        y_pos = 0
+        enemy_list.append([x_pos, y_pos])
+
+def draw_enemies(enemy_list):
+    for enemy_pos in enemy_list:
+         pygame.draw.rect(screen,  SILVER, (enemy_pos[0], enemy_pos[1], enemy_size, enemy_size))
+
 
 def detect_collision(player_pos, enemy_pos):
     p_x = player_pos[0]
@@ -88,7 +99,6 @@ while not game_over:
         game_over = True
         break
 
-    pygame.draw.rect(screen,  SILVER, (enemy_pos[0], enemy_pos[1], enemy_size, enemy_size))
     pygame.draw.rect(screen, COLOUR, (player_pos[0], player_pos[1], player_size, player_size))
 
     clock.tick(SPEED)
