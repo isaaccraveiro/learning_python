@@ -86,6 +86,7 @@ while not game_over:
         print("game over")
         COLOUR = (155,123,67)
         game_over = True
+        break
 
     pygame.draw.rect(screen,  SILVER, (enemy_pos[0], enemy_pos[1], enemy_size, enemy_size))
     pygame.draw.rect(screen, COLOUR, (player_pos[0], player_pos[1], player_size, player_size))
