@@ -76,30 +76,6 @@ while not game_over:
         pygame.draw.rect(screen, rgb, (i * SQUARE_SIZE, 1 * SQUARE_SIZE, SQUARE_SIZE, SQUARE_SIZE))
 
 
-    # note palette
-    rgb = webcolors.hex_to_rgb(note_palette[0])
-    pygame.draw.rect(screen, rgb, (0 * SQUARE_SIZE, 0 * SQUARE_SIZE, SQUARE_SIZE, SQUARE_SIZE))
-    rgb = webcolors.hex_to_rgb(note_palette[1])
-    pygame.draw.rect(screen, rgb, (1 * SQUARE_SIZE, 0 * SQUARE_SIZE, SQUARE_SIZE, SQUARE_SIZE))
-    rgb = webcolors.hex_to_rgb(note_palette[2])
-    pygame.draw.rect(screen, rgb, (2 * SQUARE_SIZE, 0 * SQUARE_SIZE, SQUARE_SIZE, SQUARE_SIZE))
-    rgb = webcolors.hex_to_rgb(note_palette[3])
-    pygame.draw.rect(screen, rgb, (3 * SQUARE_SIZE, 0 * SQUARE_SIZE, SQUARE_SIZE, SQUARE_SIZE))
-    rgb = webcolors.hex_to_rgb(note_palette[4])
-    pygame.draw.rect(screen, rgb, (4 * SQUARE_SIZE, 0 * SQUARE_SIZE, SQUARE_SIZE, SQUARE_SIZE))
-
-    # package palette
-    rgb = webcolors.hex_to_rgb(package_palette[0])
-    pygame.draw.rect(screen, rgb, (0 * SQUARE_SIZE, 1 * SQUARE_SIZE, SQUARE_SIZE, SQUARE_SIZE))
-    rgb = webcolors.hex_to_rgb(package_palette[1])
-    pygame.draw.rect(screen, rgb, (1 * SQUARE_SIZE, 1 * SQUARE_SIZE, SQUARE_SIZE, SQUARE_SIZE))
-    rgb = webcolors.hex_to_rgb(package_palette[2])
-    pygame.draw.rect(screen, rgb, (2 * SQUARE_SIZE, 1 * SQUARE_SIZE, SQUARE_SIZE, SQUARE_SIZE))
-    rgb = webcolors.hex_to_rgb(package_palette[3])
-    pygame.draw.rect(screen, rgb, (3 * SQUARE_SIZE, 1 * SQUARE_SIZE, SQUARE_SIZE, SQUARE_SIZE))
-    rgb = webcolors.hex_to_rgb(package_palette[4])
-    pygame.draw.rect(screen, rgb, (4 * SQUARE_SIZE, 1 * SQUARE_SIZE, SQUARE_SIZE, SQUARE_SIZE))
-
     rgb = webcolors.hex_to_rgb(manually_gen_palette[0])
     pygame.draw.rect(screen, rgb, (0, 1 * SQUARE_SIZE, 0, 50))
   #  rgb = webcolors.hex_to_rgb(package_palette[1])
