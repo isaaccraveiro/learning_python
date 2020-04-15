@@ -4,10 +4,10 @@ import sys
 import seaborn as sns
 import webcolors
 
-note_palette = sns.light_palette("#F0E68C", 10).as_hex()
+note_palette = sns.light_palette("#F0E68C", 12).as_hex()
 print("note_palette = ", note_palette)
 
-package_palette = sns.color_palette("Blues_d", 8).as_hex()
+package_palette = sns.color_palette("Blues_d", 12).as_hex()
 print("package_palette = ", package_palette)
 
 manually_gen_palette = sns.light_palette("#5768FF", 10).as_hex()
@@ -65,6 +65,17 @@ while not game_over:
             sys.exit(),
 
     screen.fill(BACKGROUND)
+
+
+    # for loop
+    for i in range(11):
+        print("i: ", i)
+        rgb = webcolors.hex_to_rgb(note_palette[i])
+        pygame.draw.rect(screen, rgb, (i * SQUARE_SIZE, 0 * SQUARE_SIZE, SQUARE_SIZE, SQUARE_SIZE))
+        rgb = webcolors.hex_to_rgb(package_palette[i])
+        pygame.draw.rect(screen, rgb, (i * SQUARE_SIZE, 1 * SQUARE_SIZE, SQUARE_SIZE, SQUARE_SIZE))
+
+
     # note palette
     rgb = webcolors.hex_to_rgb(note_palette[0])
     pygame.draw.rect(screen, rgb, (0 * SQUARE_SIZE, 0 * SQUARE_SIZE, SQUARE_SIZE, SQUARE_SIZE))
