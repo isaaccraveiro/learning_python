@@ -10,23 +10,23 @@ print("note_palette = ", note_palette)
 package_palette = sns.color_palette("Blues_d", 12).as_hex()
 print("package_palette = ", package_palette)
 
-manually_gen_palette = sns.light_palette("#5768FF", 10).as_hex()
-print("manually_gen_palette   = ", manually_gen_palette )
+manually_gen_palette = sns.light_palette("#5768FF", 12).as_hex()
+print("manually_gen_palette   = ", manually_gen_palette)
 
-# palette = sns.light_palette("#FBA5A5", 1)
-# print("testing_palette = ", palette.as_hex())
+testing_palette = sns.light_palette("#FBA5A5", 12).as_hex()
+print("testing_palette = ",testing_palette)
 
-# palette = sns.light_palette("#00ff7f", 10)
-# print("orm_palette = ", palette.as_hex())
+orm_palette = sns.light_palette("#00ff7f", 12).as_hex()
+print("orm_palette = ", orm_palette)
 
-# palette = sns.light_palette("#A0522D", 6)
-# print("decoration_palette = ", palette.as_hex())
+decoration_palette = sns.light_palette("#A0522D", 12).as_hex()
+print("decoration_palette = ", decoration_palette)
 
-# palette = sns.light_palette("#529999", 10)
-# print("variability_palette = ", palette.as_hex())
+variability_palette = sns.light_palette("#529999", 12).as_hex()
+print("variability_palette = ", variability_palette)
 
-# palette = sns.light_palette("#FFFF00", 5)
-# print("mapping_palette = ", palette.as_hex())
+mapping_palette = sns.light_palette("#FFFF00", 12).as_hex()
+print("mapping_palette = ", mapping_palette)
 
 # palette = sns.light_palette("#ff8c00", 3)
 # print("templating_palette = ", palette.as_hex())
@@ -72,20 +72,31 @@ while not game_over:
         print("i: ", i)
         rgb = webcolors.hex_to_rgb(note_palette[i])
         pygame.draw.rect(screen, rgb, (i * SQUARE_SIZE, 0 * SQUARE_SIZE, SQUARE_SIZE, SQUARE_SIZE))
+
         rgb = webcolors.hex_to_rgb(package_palette[i])
         pygame.draw.rect(screen, rgb, (i * SQUARE_SIZE, 1 * SQUARE_SIZE, SQUARE_SIZE, SQUARE_SIZE))
 
+        rgb = webcolors.hex_to_rgb(manually_gen_palette[i])
+        pygame.draw.rect(screen, rgb, (i * SQUARE_SIZE, 2 * SQUARE_SIZE, SQUARE_SIZE, SQUARE_SIZE))
 
-    rgb = webcolors.hex_to_rgb(manually_gen_palette[0])
-    pygame.draw.rect(screen, rgb, (0, 1 * SQUARE_SIZE, 0, 50))
-  #  rgb = webcolors.hex_to_rgb(package_palette[1])
-  #  pygame.draw.rect(screen, rgb, (0, 1 * SQUARE_SIZE, 100, 50))
-  #  rgb = webcolors.hex_to_rgb(package_palette[2])
-  #  pygame.draw.rect(screen, rgb, (0, 1 * SQUARE_SIZE, 150, 50))
-  #  rgb = webcolors.hex_to_rgb(package_palette[3])
-  #  pygame.draw.rect(screen, rgb, (0, 1 * SQUARE_SIZE, 200, 50))
-  #  rgb = webcolors.hex_to_rgb(package_palette[4])
-  # pygame.draw.rect(screen, rgb, (0, 1 * SQUARE_SIZE, 250, 50))
+        rgb = webcolors.hex_to_rgb(testing_palette[i])
+        pygame.draw.rect(screen, rgb, (i * SQUARE_SIZE, 3 * SQUARE_SIZE, SQUARE_SIZE, SQUARE_SIZE))
+
+        rgb = webcolors.hex_to_rgb(orm_palette[i])
+        pygame.draw.rect(screen, rgb, (i * SQUARE_SIZE, 4 * SQUARE_SIZE, SQUARE_SIZE, SQUARE_SIZE))
+
+        rgb = webcolors.hex_to_rgb(decoration_palette[i])
+        pygame.draw.rect(screen, rgb, (i * SQUARE_SIZE, 5 * SQUARE_SIZE, SQUARE_SIZE, SQUARE_SIZE))
+
+        rgb = webcolors.hex_to_rgb(variability_palette[i])
+        pygame.draw.rect(screen, rgb, (i * SQUARE_SIZE, 6 * SQUARE_SIZE, SQUARE_SIZE, SQUARE_SIZE))
+
+        rgb = webcolors.hex_to_rgb(mapping_palette[i])
+        pygame.draw.rect(screen, rgb, (i * SQUARE_SIZE, 7 * SQUARE_SIZE, SQUARE_SIZE, SQUARE_SIZE))
+
+
+
+
     clock.tick(SPEED)
 
     pygame.display.update()
