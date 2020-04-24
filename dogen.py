@@ -34,11 +34,11 @@ print("templating_palette = ",templating_palette)
 serialization_palette = sns.light_palette("#00FF00", 12).as_hex()
 print("serialization_palette = ",serialization_palette)
 
-# palette = sns.light_palette("#006400", 10)
-# print("visual_studio_palette = ", palette.as_hex())
+visual_studio_palette = sns.light_palette("#006400", 12).as_hex()
+print("visual_studio_palette = ", visual_studio_palette)
 
-# palette = sns.light_palette("#9400d3", 20)
-# print("core_palette = ", palette.as_hex())
+core_palette = sns.light_palette("#9400d3", 12).as_hex()
+print("core_palette = ",core_palette)
 
 pygame.init()
 
@@ -100,6 +100,11 @@ while not game_over:
         rgb = webcolors.hex_to_rgb(serialization_palette[i])
         pygame.draw.rect(screen, rgb, (i * SQUARE_SIZE, 9 * SQUARE_SIZE, SQUARE_SIZE, SQUARE_SIZE))
 
+        rgb = webcolors.hex_to_rgb(visual_studio_palette[i])
+        pygame.draw.rect(screen, rgb, (i * SQUARE_SIZE, 10 * SQUARE_SIZE, SQUARE_SIZE, SQUARE_SIZE))
+
+        rgb = webcolors.hex_to_rgb(core_palette[i])
+        pygame.draw.rect(screen, rgb, (i * SQUARE_SIZE, 11 * SQUARE_SIZE, SQUARE_SIZE, SQUARE_SIZE))
 
 
     clock.tick(SPEED)
