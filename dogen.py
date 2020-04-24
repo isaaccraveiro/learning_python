@@ -49,6 +49,7 @@ HEIGHT = SQUARE_SIZE * 12
 # define the RGB value for white,
 #  green, blue colour .
 white = (255, 255, 255)
+black = (0, 0, 0)
 green = (0, 255, 0)
 blue = (0, 0, 128)
 
@@ -128,7 +129,7 @@ while not game_over:
 
     # create a text suface object,
     # on which text is drawn on it.
-    text = font.render('GeeksForGeeks', True, green, blue)
+    text = font.render('test', True, black, white)
 
     # create a rectangular object for the
     # text surface object
