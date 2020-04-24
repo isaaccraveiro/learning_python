@@ -43,8 +43,8 @@ print("core_palette = ",core_palette)
 pygame.init()
 
 WIDTH = 1000
-HEIGHT = 800
-SQUARE_SIZE = 50
+HEIGHT = 950
+SQUARE_SIZE = 75
 
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
 
