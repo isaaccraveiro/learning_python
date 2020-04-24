@@ -42,7 +42,7 @@ print("core_palette = ",core_palette)
 
 pygame.init()
 
-SQUARE_SIZE = 50
+SQUARE_SIZE = 75
 WIDTH = SQUARE_SIZE * 11
 HEIGHT = SQUARE_SIZE * 12
 
