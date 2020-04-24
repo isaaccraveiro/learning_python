@@ -28,11 +28,11 @@ print("variability_palette = ", variability_palette)
 mapping_palette = sns.light_palette("#FFFF00", 12).as_hex()
 print("mapping_palette = ", mapping_palette)
 
-# palette = sns.light_palette("#ff8c00", 3)
-# print("templating_palette = ", palette.as_hex())
+templating_palette = sns.light_palette("#ff8c00", 12).as_hex()
+print("templating_palette = ",templating_palette)
 
-# palette = sns.light_palette("#00FF00", 2)
-# print("serialization_palette = ", palette.as_hex())
+serialization_palette = sns.light_palette("#00FF00", 12).as_hex()
+print("serialization_palette = ",serialization_palette)
 
 # palette = sns.light_palette("#006400", 10)
 # print("visual_studio_palette = ", palette.as_hex())
@@ -94,6 +94,11 @@ while not game_over:
         rgb = webcolors.hex_to_rgb(mapping_palette[i])
         pygame.draw.rect(screen, rgb, (i * SQUARE_SIZE, 7 * SQUARE_SIZE, SQUARE_SIZE, SQUARE_SIZE))
 
+        rgb = webcolors.hex_to_rgb(templating_palette[i])
+        pygame.draw.rect(screen, rgb, (i * SQUARE_SIZE, 8 * SQUARE_SIZE, SQUARE_SIZE, SQUARE_SIZE))
+
+        rgb = webcolors.hex_to_rgb(serialization_palette[i])
+        pygame.draw.rect(screen, rgb, (i * SQUARE_SIZE, 9 * SQUARE_SIZE, SQUARE_SIZE, SQUARE_SIZE))
 
 
 
