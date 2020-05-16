@@ -43,7 +43,7 @@ print("core_palette = ",core_palette)
 pygame.init()
 
 SQUARE_SIZE = 75
-WIDTH = SQUARE_SIZE * 11
+WIDTH = SQUARE_SIZE * 12
 HEIGHT = SQUARE_SIZE * 12
 
 # define the RGB value for white,
@@ -58,6 +58,7 @@ X = 400
 Y = 400
 
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
+pygame.font.init()
 
 game_over = False
 
@@ -77,12 +78,19 @@ while not game_over:
 
     screen.fill(BACKGROUND)
 
+    myfont = pygame.font.SysFont('Comic Sans MS', 30)
+    font = pygame.font.Font('freesansbold.ttf', 25)
+    textsurface = myfont.render('Some Text', False, (0, 0, 0))
 
     # for loop
-    for i in range(11):
+    for i in range(12):
         print("i: ", i)
         rgb = webcolors.hex_to_rgb(note_palette[i])
         pygame.draw.rect(screen, rgb, (i * SQUARE_SIZE, 0 * SQUARE_SIZE, SQUARE_SIZE, SQUARE_SIZE))
+
+        #text = font.render('test', True, black, white)
+        #textRect = text.get_rect()
+        #textRect.center = (i * SQUARE_SIZE, SQUARE_SIZE / 2)
 
         rgb = webcolors.hex_to_rgb(package_palette[i])
         pygame.draw.rect(screen, rgb, (i * SQUARE_SIZE, 1 * SQUARE_SIZE, SQUARE_SIZE, SQUARE_SIZE))
@@ -117,31 +125,13 @@ while not game_over:
         rgb = webcolors.hex_to_rgb(core_palette[i])
         pygame.draw.rect(screen, rgb, (i * SQUARE_SIZE, 11 * SQUARE_SIZE, SQUARE_SIZE, SQUARE_SIZE))
 
+        screen.blit(textsurface, (i * SQUARE_SIZE, SQUARE_SIZE * i))
 
-    # set the pygame window name
+
     pygame.display.set_caption('Show Text')
 
-    # create a font object.
-    # 1st parameter is the font file
-    # which is present in pygame.
-    # 2nd parameter is size of the font
-    font = pygame.font.Font('freesansbold.ttf', 32)
 
-    # create a text suface object,
-    # on which text is drawn on it.
-    text = font.render('test', True, black, white)
-
-    # create a rectangular object for the
-    # text surface object
-    textRect = text.get_rect()
-
-    # set the center of the rectangular object.
-    textRect.center = (X // 2, Y // 2)
-
-    # copying the text surface object
-    # to the display surface object
-    # at the center coordinate.
-    screen.blit(text, textRect)
+    #screen.blit(text, textRect)
 
     clock.tick(SPEED)
 
