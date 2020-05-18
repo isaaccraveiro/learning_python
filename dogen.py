@@ -78,16 +78,14 @@ while not game_over:
 
     screen.fill(BACKGROUND)
 
-    myfont = pygame.font.SysFont('Comic Sans MS', 20)
-    #font = pygame.font.Font('freesansbold.ttf', 10)
+    myfont = pygame.font.SysFont('Consolas', 20)
     textsurface = myfont.render('Some', False, (0, 0, 0))
 
     # for loop
     for i in range(12):
-        print("i: ", i)
         rgb = webcolors.hex_to_rgb(note_palette[i])
         pygame.draw.rect(screen, rgb, (i * SQUARE_SIZE, 0 * SQUARE_SIZE, SQUARE_SIZE, SQUARE_SIZE))
-        screen.blit(textsurface, (i * SQUARE_SIZE, 10 + 0 * SQUARE_SIZE))
+        screen.blit(textsurface, (i * SQUARE_SIZE, SQUARE_SIZE/2-10 + 0 * SQUARE_SIZE))
 
         rgb = webcolors.hex_to_rgb(package_palette[i])
         pygame.draw.rect(screen, rgb, (i * SQUARE_SIZE, 1 * SQUARE_SIZE, SQUARE_SIZE, SQUARE_SIZE))
@@ -133,14 +131,7 @@ while not game_over:
         pygame.draw.rect(screen, rgb, (i * SQUARE_SIZE, 11 * SQUARE_SIZE, SQUARE_SIZE, SQUARE_SIZE))
         screen.blit(textsurface, (i * SQUARE_SIZE, 10 + 11 * SQUARE_SIZE))
 
-        #screen.blit(textsurface, (i * SQUARE_SIZE, SQUARE_SIZE * i))
-
-
-
     pygame.display.set_caption('Show Text')
-
-
-    #screen.blit(text, textRect)
 
     clock.tick(SPEED)
 
