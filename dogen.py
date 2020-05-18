@@ -78,25 +78,24 @@ while not game_over:
 
     screen.fill(BACKGROUND)
 
-    myfont = pygame.font.SysFont('Comic Sans MS', 30)
-    font = pygame.font.Font('freesansbold.ttf', 25)
-    textsurface = myfont.render('Some Text', False, (0, 0, 0))
+    myfont = pygame.font.SysFont('Comic Sans MS', 20)
+    #font = pygame.font.Font('freesansbold.ttf', 10)
+    textsurface = myfont.render('Some', False, (0, 0, 0))
 
     # for loop
     for i in range(12):
         print("i: ", i)
         rgb = webcolors.hex_to_rgb(note_palette[i])
         pygame.draw.rect(screen, rgb, (i * SQUARE_SIZE, 0 * SQUARE_SIZE, SQUARE_SIZE, SQUARE_SIZE))
-
-        #text = font.render('test', True, black, white)
-        #textRect = text.get_rect()
-        #textRect.center = (i * SQUARE_SIZE, SQUARE_SIZE / 2)
+        screen.blit(textsurface, (i * SQUARE_SIZE, 10 + 0 * SQUARE_SIZE))
 
         rgb = webcolors.hex_to_rgb(package_palette[i])
         pygame.draw.rect(screen, rgb, (i * SQUARE_SIZE, 1 * SQUARE_SIZE, SQUARE_SIZE, SQUARE_SIZE))
+        screen.blit(textsurface, (i * SQUARE_SIZE, 10 + 1 * SQUARE_SIZE))
 
         rgb = webcolors.hex_to_rgb(manually_gen_palette[i])
         pygame.draw.rect(screen, rgb, (i * SQUARE_SIZE, 2 * SQUARE_SIZE, SQUARE_SIZE, SQUARE_SIZE))
+        screen.blit(textsurface, (i * SQUARE_SIZE, 10 + 2 * SQUARE_SIZE))
 
         rgb = webcolors.hex_to_rgb(testing_palette[i])
         pygame.draw.rect(screen, rgb, (i * SQUARE_SIZE, 3 * SQUARE_SIZE, SQUARE_SIZE, SQUARE_SIZE))
@@ -125,7 +124,8 @@ while not game_over:
         rgb = webcolors.hex_to_rgb(core_palette[i])
         pygame.draw.rect(screen, rgb, (i * SQUARE_SIZE, 11 * SQUARE_SIZE, SQUARE_SIZE, SQUARE_SIZE))
 
-        screen.blit(textsurface, (i * SQUARE_SIZE, SQUARE_SIZE * i))
+        #screen.blit(textsurface, (i * SQUARE_SIZE, SQUARE_SIZE * i))
+
 
 
     pygame.display.set_caption('Show Text')
