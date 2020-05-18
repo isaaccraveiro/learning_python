@@ -119,16 +119,19 @@ while not game_over:
 
         rgb = webcolors.hex_to_rgb(templating_palette[i])
         pygame.draw.rect(screen, rgb, (i * SQUARE_SIZE, 8 * SQUARE_SIZE, SQUARE_SIZE, SQUARE_SIZE))
-        screen.blit(textsurface, (i * SQUARE_SIZE, 10 + 7 * SQUARE_SIZE))
+        screen.blit(textsurface, (i * SQUARE_SIZE, 10 + 8 * SQUARE_SIZE))
 
         rgb = webcolors.hex_to_rgb(serialization_palette[i])
         pygame.draw.rect(screen, rgb, (i * SQUARE_SIZE, 9 * SQUARE_SIZE, SQUARE_SIZE, SQUARE_SIZE))
+        screen.blit(textsurface, (i * SQUARE_SIZE, 10 + 9 * SQUARE_SIZE))
 
         rgb = webcolors.hex_to_rgb(visual_studio_palette[i])
         pygame.draw.rect(screen, rgb, (i * SQUARE_SIZE, 10 * SQUARE_SIZE, SQUARE_SIZE, SQUARE_SIZE))
+        screen.blit(textsurface, (i * SQUARE_SIZE, 10 + 10 * SQUARE_SIZE))
 
         rgb = webcolors.hex_to_rgb(core_palette[i])
         pygame.draw.rect(screen, rgb, (i * SQUARE_SIZE, 11 * SQUARE_SIZE, SQUARE_SIZE, SQUARE_SIZE))
+        screen.blit(textsurface, (i * SQUARE_SIZE, 10 + 11 * SQUARE_SIZE))
 
         #screen.blit(textsurface, (i * SQUARE_SIZE, SQUARE_SIZE * i))
 
