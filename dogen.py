@@ -68,8 +68,10 @@ BACKGROUND = (169,169,169)
 COLOUR = (255,123,67)
 SPEED = 30
 
-def test(index):
-    print("here: ", index)
+def test(x_index):
+    print("here: ", x_index)
+    rgb = webcolors.hex_to_rgb(note_palette[x_index])
+
 
 while not game_over:
 
