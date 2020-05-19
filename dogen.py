@@ -68,6 +68,8 @@ BACKGROUND = (169,169,169)
 COLOUR = (255,123,67)
 SPEED = 30
 
+def test(index):
+    print("here: ", index)
 
 while not game_over:
 
@@ -83,6 +85,7 @@ while not game_over:
 
     # for loop
     for i in range(12):
+        test(i)
         rgb = webcolors.hex_to_rgb(note_palette[i])
         pygame.draw.rect(screen, rgb, (i * SQUARE_SIZE, 0 * SQUARE_SIZE, SQUARE_SIZE, SQUARE_SIZE))
         screen.blit(textsurface, (i * SQUARE_SIZE, SQUARE_SIZE/2-10 + 0 * SQUARE_SIZE))
