@@ -69,7 +69,6 @@ COLOUR = (255,123,67)
 SPEED = 30
 
 def draw(palette, x_index, y_index):
-    print("here: ", x_index)
     rgb = webcolors.hex_to_rgb(palette[x_index])
     pygame.draw.rect(screen, rgb, (x_index * SQUARE_SIZE, y_index * SQUARE_SIZE, SQUARE_SIZE, SQUARE_SIZE))
     screen.blit(textsurface, (x_index * SQUARE_SIZE, SQUARE_SIZE/2-10 + y_index * SQUARE_SIZE))
@@ -89,61 +88,17 @@ while not game_over:
     # for loop
     for i in range(12):
         draw(note_palette, i, 0)
-        #rgb = webcolors.hex_to_rgb(note_palette[i])
-        #pygame.draw.rect(screen, rgb, (i * SQUARE_SIZE, 0 * SQUARE_SIZE, SQUARE_SIZE, SQUARE_SIZE))
-        #screen.blit(textsurface, (i * SQUARE_SIZE, SQUARE_SIZE/2-10 + 0 * SQUARE_SIZE))
-
         draw(package_palette, i, 1)
-        #rgb = webcolors.hex_to_rgb(package_palette[i])
-        #pygame.draw.rect(screen, rgb, (i * SQUARE_SIZE, 1 * SQUARE_SIZE, SQUARE_SIZE, SQUARE_SIZE))
-        #screen.blit(textsurface, (i * SQUARE_SIZE, 10 + 1 * SQUARE_SIZE))
-
         draw(manually_gen_palette, i, 2)
-        #rgb = webcolors.hex_to_rgb(manually_gen_palette[i])
-        #pygame.draw.rect(screen, rgb, (i * SQUARE_SIZE, 2 * SQUARE_SIZE, SQUARE_SIZE, SQUARE_SIZE))
-        #screen.blit(textsurface, (i * SQUARE_SIZE, 10 + 2 * SQUARE_SIZE))
-
         draw(testing_palette, i, 3)
-        #rgb = webcolors.hex_to_rgb(testing_palette[i])
-        #pygame.draw.rect(screen, rgb, (i * SQUARE_SIZE, 3 * SQUARE_SIZE, SQUARE_SIZE, SQUARE_SIZE))
-        #screen.blit(textsurface, (i * SQUARE_SIZE, 10 + 3 * SQUARE_SIZE))
-
         draw(orm_palette, i, 4)
-        #rgb = webcolors.hex_to_rgb(orm_palette[i])
-        #pygame.draw.rect(screen, rgb, (i * SQUARE_SIZE, 4 * SQUARE_SIZE, SQUARE_SIZE, SQUARE_SIZE))
-        #screen.blit(textsurface, (i * SQUARE_SIZE, 10 + 4 * SQUARE_SIZE))
-
         draw(decoration_palette, i, 5)
-        #rgb = webcolors.hex_to_rgb(decoration_palette[i])
-        #pygame.draw.rect(screen, rgb, (i * SQUARE_SIZE, 5 * SQUARE_SIZE, SQUARE_SIZE, SQUARE_SIZE))
-        #screen.blit(textsurface, (i * SQUARE_SIZE, 10 + 5 * SQUARE_SIZE))
-
         draw(variability_palette, i, 6)
-        #rgb = webcolors.hex_to_rgb(variability_palette[i])
-        #pygame.draw.rect(screen, rgb, (i * SQUARE_SIZE, 6 * SQUARE_SIZE, SQUARE_SIZE, SQUARE_SIZE))
-        #screen.blit(textsurface, (i * SQUARE_SIZE, 10 + 6 * SQUARE_SIZE))
-
         draw(mapping_palette, i, 7)
-        #rgb = webcolors.hex_to_rgb(mapping_palette[i])
-        #pygame.draw.rect(screen, rgb, (i * SQUARE_SIZE, 7 * SQUARE_SIZE, SQUARE_SIZE, SQUARE_SIZE))
-        #screen.blit(textsurface, (i * SQUARE_SIZE, 10 + 7 * SQUARE_SIZE))
-
         draw(templating_palette, i, 8)
-        #rgb = webcolors.hex_to_rgb(templating_palette[i])
-        #pygame.draw.rect(screen, rgb, (i * SQUARE_SIZE, 8 * SQUARE_SIZE, SQUARE_SIZE, SQUARE_SIZE))
-        #screen.blit(textsurface, (i * SQUARE_SIZE, 10 + 8 * SQUARE_SIZE))
-
-        rgb = webcolors.hex_to_rgb(serialization_palette[i])
-        pygame.draw.rect(screen, rgb, (i * SQUARE_SIZE, 9 * SQUARE_SIZE, SQUARE_SIZE, SQUARE_SIZE))
-        screen.blit(textsurface, (i * SQUARE_SIZE, 10 + 9 * SQUARE_SIZE))
-
-        rgb = webcolors.hex_to_rgb(visual_studio_palette[i])
-        pygame.draw.rect(screen, rgb, (i * SQUARE_SIZE, 10 * SQUARE_SIZE, SQUARE_SIZE, SQUARE_SIZE))
-        screen.blit(textsurface, (i * SQUARE_SIZE, 10 + 10 * SQUARE_SIZE))
-
-        rgb = webcolors.hex_to_rgb(core_palette[i])
-        pygame.draw.rect(screen, rgb, (i * SQUARE_SIZE, 11 * SQUARE_SIZE, SQUARE_SIZE, SQUARE_SIZE))
-        screen.blit(textsurface, (i * SQUARE_SIZE, 10 + 11 * SQUARE_SIZE))
+        draw(serialization_palette, i, 9)
+        draw(visual_studio_palette, i, 10)
+        draw(core_palette, i, 11)
 
     pygame.display.set_caption('Show Text')
 
