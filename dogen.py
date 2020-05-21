@@ -102,18 +102,20 @@ while not game_over:
 
     # for loop
     for i in range(12):
-        draw(palettes[0], i, 0)
-        draw(palettes[1], i, 1)
-        draw(palettes[2], i, 2)
-        draw(palettes[3], i, 3)
-        draw(palettes[4], i, 4)
-        draw(palettes[5], i, 5)
-        draw(palettes[6], i, 6)
-        draw(palettes[7], i, 7)
-        draw(palettes[8], i, 8)
-        draw(palettes[9], i, 9)
-        draw(palettes[10], i, 10)
-        draw(palettes[11], i, 11)
+        for j in range(12):
+            draw(palettes[j], i, j)
+        # draw(palettes[0], i, 0)
+        # draw(palettes[1], i, 1)
+        # draw(palettes[2], i, 2)
+        # draw(palettes[3], i, 3)
+        # draw(palettes[4], i, 4)
+        # draw(palettes[5], i, 5)
+        # draw(palettes[6], i, 6)
+        # draw(palettes[7], i, 7)
+        # draw(palettes[8], i, 8)
+        # draw(palettes[9], i, 9)
+        # draw(palettes[10], i, 10)
+        # draw(palettes[11], i, 11)
 
     pygame.display.set_caption('Show Text')
 
