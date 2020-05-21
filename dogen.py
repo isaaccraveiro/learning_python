@@ -40,6 +40,23 @@ print("visual_studio_palette = ", visual_studio_palette)
 core_palette = sns.light_palette("#9400d3", 12).as_hex()
 print("core_palette = ",core_palette)
 
+palettes = [
+        note_palette,
+        package_palette,
+        manually_gen_palette,
+        testing_palette,
+        orm_palette,
+        decoration_palette,
+        variability_palette,
+        mapping_palette,
+        templating_palette,
+        serialization_palette,
+        visual_studio_palette,
+        core_palette
+]
+
+
+
 pygame.init()
 
 SQUARE_SIZE = 75
@@ -87,7 +104,7 @@ while not game_over:
 
     # for loop
     for i in range(12):
-        draw(note_palette, i, 0)
+        draw(palettes[0], i, 0)
         draw(package_palette, i, 1)
         draw(manually_gen_palette, i, 2)
         draw(testing_palette, i, 3)
