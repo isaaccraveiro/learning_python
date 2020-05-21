@@ -55,8 +55,6 @@ palettes = [
         core_palette
 ]
 
-
-
 pygame.init()
 
 SQUARE_SIZE = 75
@@ -105,17 +103,17 @@ while not game_over:
     # for loop
     for i in range(12):
         draw(palettes[0], i, 0)
-        draw(package_palette, i, 1)
-        draw(manually_gen_palette, i, 2)
-        draw(testing_palette, i, 3)
-        draw(orm_palette, i, 4)
-        draw(decoration_palette, i, 5)
-        draw(variability_palette, i, 6)
-        draw(mapping_palette, i, 7)
-        draw(templating_palette, i, 8)
-        draw(serialization_palette, i, 9)
-        draw(visual_studio_palette, i, 10)
-        draw(core_palette, i, 11)
+        draw(palettes[1], i, 1)
+        draw(palettes[2], i, 2)
+        draw(palettes[3], i, 3)
+        draw(palettes[4], i, 4)
+        draw(palettes[5], i, 5)
+        draw(palettes[6], i, 6)
+        draw(palettes[7], i, 7)
+        draw(palettes[8], i, 8)
+        draw(palettes[9], i, 9)
+        draw(palettes[10], i, 10)
+        draw(palettes[11], i, 11)
 
     pygame.display.set_caption('Show Text')
 
